@@ -9,8 +9,15 @@ namespace myFirstApp
     class Fruit
     {
         public string Nev;
-        public string Szárh;
+        public string Szarh;
         public int Menny;
 
+               public Fruit(string aNev, string aSzhely, int aMenny )
+        {
+            Nev = aNev;
+                Szarh = aSzhely;
+                Menny = aMenny;
+            Console.WriteLine("DEBUG: Fruit() konstruktor meghívás:");
+        }
     }
 }

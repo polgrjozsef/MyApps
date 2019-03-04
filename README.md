@@ -7,3 +7,7 @@ osztályt. Adattagok az osztályban:Gyümölcs neve,származási hely,Mennyiség.
 
 ##Az osztály neve:Fruit
 #Adattagok:Nev:String, Szarh:String, Menny:int
+
+#különleges metódus az osztályon belül: Konstruktor
+
+public Fruit (string anev, string aszhely, int amenny)
