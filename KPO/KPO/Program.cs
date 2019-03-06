@@ -13,19 +13,19 @@ namespace KPO
             //Program: Kő,papír,olló játék programozása!
             //Írta: Polgár József, 2019.03.06
             //Megoldandó feladat: 1. Ciklikus program futás mindaddig, amíg a játékos szeretne játszani!
-            bool moreGame = true;
-            
-            Console.WriteLine("***************Kő/Papír/Olló játék***************");
-            do
+
+            Random r = new Random();
+
+            string compChoice = ""; string playerChoice = "";
+
+            int compScore = 0; int playerScore = 0;
+
+            bool l = true; do
             {
-                Console.Write("Akarsz még játszani? i/n");
-                if (Console.ReadKey(true).KeyChar == 'n')
+                Console.WriteLine("Akarsz még játszani? i/n");
 
-                {
-                    moreGame = false;
-
-                }
-            } while (moreGame);
+                if (Console.ReadKey(true).KeyChar == 'n') l = false;
+            } while (l);
 
 
         }
