@@ -17,6 +17,11 @@ namespace ESF
 
             Console.WriteLine(ex.Name);
 
+
+            ex.PrintName();
+
+            Console.WriteLine(ex.getName());
+
             //Beolvas egy karaktert a konzolról
             Console.ReadKey();
         }

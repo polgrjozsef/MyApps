@@ -20,5 +20,17 @@ namespace ESF
         {
             Name = aName;
         }
+        //Tagfüggvény
+        public void PrintName()
+        {
+            Console.WriteLine(Name);
+
+        }
+
+        //MÁsik tagfüggvény
+        public string getName()
+        {
+            return Name;
+        }
     }
 }
