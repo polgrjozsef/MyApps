@@ -11,3 +11,8 @@ osztályt. Adattagok az osztályban:Gyümölcs neve,származási hely,Mennyiség.
 #különleges metódus az osztályon belül: Konstruktor
 
 public Fruit (string anev, string aszhely, int amenny)
+
+
+
+### Ismétlés
+###Osztály létrehozása egy string adattaggal
