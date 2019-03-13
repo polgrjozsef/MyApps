@@ -43,6 +43,39 @@ namespace ESF
                 v--;
             } while (v>0);
 
+            //ELágazások
+            v = 2;
+            if (v == 2)
+            {
+                Console.WriteLine("A v értéke egyenlõ 2vel");
+            }
+            else if (v == 3)
+            {
+                Console.WriteLine("A v értéke egyenlõ 3al");
+            }
+            else
+            {
+                Console.WriteLine("V nem 2 és nem 3, hanem:");
+            }
+
+            //switch
+            v = 6;
+            switch (v)
+            {
+                case 0:
+                    Console.WriteLine("Switch: " + v);
+
+                    break;
+                case 5:
+                    Console.WriteLine("Switch: " + v);
+                    break;
+                default:
+                    Console.WriteLine("Switch default: " + v);
+                break;
+
+
+            }
+
             //Beolvas egy karaktert a konzolról
             Console.ReadKey();
         }
