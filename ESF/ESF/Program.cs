@@ -11,6 +11,7 @@ namespace ESF
         static void Main(string[] args)
         {
             int v = 0;
+            string s;
             //A létrehozott új típussal inicializálunk egy objektumot
             Excercise ex = new Excercise("Polgár József");
 
@@ -77,6 +78,31 @@ namespace ESF
             }
 
             //Beolvas egy karaktert a konzolról
+            s = Console.ReadLine();
+            Console.WriteLine("Beolvasás konzolról:" + s);
+
+            //Egy billentyû leütése
+            //******Console.ReadKey(true).KeyChar******
+            //integerré konvertálni a console számot(string)
+            // int.Parse(Console.ReadLine())  
+
+            //Tömbök
+            //Léter hoztunk egy int elemeket tartalmkazó tömböt melynek a neve: szamok
+            int[] szamok = new int[5];
+            string[] szovegek = new string[10]; 
+
+            //TÖmb inicializálás
+            int[] iNums = new int[] { 1, 2, 3, 4, 5, 6 };
+
+            string[] sFruit = new string[] {"alma", "körte", "banán", "narancs"};
+            Console.WriteLine("iNums elsõ eleme: {0} sFruit elsõ eleme:{1} ",iNums[0], sFruit[0]);
+            Console.WriteLine("iNums elsõ eleme: " + iNums[0] + " sFruit elsõ eleme: " + sFruit[0]);
+
+            ///Típusos listák:
+            
+            //Lista elem
+
+
             Console.ReadKey();
         }
     }
