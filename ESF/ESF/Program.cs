@@ -98,9 +98,45 @@ namespace ESF
             Console.WriteLine("iNums elsõ eleme: {0} sFruit elsõ eleme:{1} ",iNums[0], sFruit[0]);
             Console.WriteLine("iNums elsõ eleme: " + iNums[0] + " sFruit elsõ eleme: " + sFruit[0]);
 
-            ///Típusos listák:
-            
+            ///Típusos listák: List<T> 
+
             //Lista elem
+            var Lista = new List<Book>();
+
+            //Új elemek hozzáadása a listához
+            //Ctrl-'.' Hívhatjuk segítségül
+            Lista.Add(new Book() { Name = "Oroszlánkölykök", Author = "Irwin Shaw", Page = 100 });
+            Lista.Add(new Book() { Name = "Megkergetve", Author = "Margó István", Page = 200 });
+            Lista.Add(new Book() { Name = "Egri csillagok", Author = "Gárdonyi Géza", Page = 1200 });
+
+
+            //Lista kiíratás
+            foreach (Book book in Lista)
+            {
+                Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+            }
+            Console.WriteLine("*********************************************************************");
+
+            Lista.Remove(new Book() { Name = "Megkergetve", Author = "Margó István", Page = 200 });
+
+            foreach (Book book in Lista)
+            {
+                Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+            }
+
+
+            Console.WriteLine("*********************************************************************");
+
+            Lista.Remove(Lista.Find(x => x.Name.Contains("Oroszlánkölykök")));
+
+
+            foreach (Book book in Lista)
+            {
+                Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+            }
+
+
+            //Console.WriteLine("Keressük az Oroszlánkölykök könyvet: " +  Lista.Find(x => x.Name.Contains("Oroszlánkölykök")).Name);
 
 
             Console.ReadKey();
