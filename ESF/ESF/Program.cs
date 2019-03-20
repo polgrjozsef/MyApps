@@ -10,8 +10,9 @@ namespace ESF
     {
         static void Main(string[] args)
         {
-            int v = 0;
-            string s;
+            bool moreBook = true;
+            int v = 0 , iPage;
+            string s, sName, sAuthor ;
             //A létrehozott új típussal inicializálunk egy objektumot
             Excercise ex = new Excercise("Polgár József");
 
@@ -127,19 +128,59 @@ namespace ESF
 
             Console.WriteLine("*********************************************************************");
 
-            Lista.Remove(Lista.Find(x => x.Name.Contains("Oroszlánkölykök")));
+           // Lista.Remove(Lista.Find(x => x.Name.Contains("Oroszlánkölykök")));
 
 
-            foreach (Book book in Lista)
-            {
-                Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
-            }
-
+            //foreach (Book book in Lista)
+           // {
+           //     Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+           // }
+            
 
             //Console.WriteLine("Keressük az Oroszlánkölykök könyvet: " +  Lista.Find(x => x.Name.Contains("Oroszlánkölykök")).Name);
 
 
-            Console.ReadKey();
+
+            //Egészítsuk ki ugy a programot h a felhasznalo lehetoseget kapjon interaktiv modon a konyvtar elemeinek modositasahoz a kovetkezo mododn: a progi ciklikusan megkerdezi h mit szeretne megcsinalni az egyes opciok-> u= 3 adat: szerzo ,cim, lapszam, t= Megkérdezi mit szeretnel torolni, l= Listazas
+            do
+            {
+                Console.WriteLine("***************************************************************************************************");
+                Console.WriteLine("********************************Üdv a Könyvtárrendszeremben!************************************");
+                Console.WriteLine("***************************************************************************************************");
+
+                Console.WriteLine("------------------------------------------------------------------------------------------------");
+                Console.WriteLine(" Kérlek válassz -> u = Új könyv felvétel , t = Valamelyik könyv törlése, l = Könyvtár listázása, k = Kilépés");
+                Console.WriteLine("------------------------------------------------------------------------------------------------");
+                moreBook = true;
+            switch (Console.ReadKey(true).KeyChar)
+            {
+                case 'l':
+                    foreach (Book book in Lista)
+                    {
+                        Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+                    }
+                    break;
+                case 't':
+                        Console.WriteLine("Melyik könyvet szeretnéd törölni?");
+                        sName = Console.ReadLine();
+                        Lista.Remove(Lista.Find(x => x.Name.Contains(sName)));
+                        break;
+                case 'u':
+                        Console.Write("Kérem a könyv címét: ");
+                        sName = Console.ReadLine();
+                        Console.Write("Kérem a könyv szerzõjét: ");
+                        sAuthor = Console.ReadLine();
+                        Console.Write("Kérem az oldalszámot: ");
+                        iPage = int.Parse(Console.ReadLine());
+                        Lista.Add(new Book { Name = sName, Author = sAuthor, Page = iPage });
+                        break;
+                    case 'k':
+                        moreBook = false;
+                        break;
+
+            }
+            } while (moreBook);
+
         }
     }
 }
