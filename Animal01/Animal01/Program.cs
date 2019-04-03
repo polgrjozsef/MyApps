@@ -10,17 +10,20 @@ namespace Animal01
     {
         static void Main(string[] args)
         {
-            Cat myCat = new Cat("Cirmi");
+            Cat myCat = new Cat("Cirmi", true);
             myCat.Sleep();
             myCat.Hunt();
             myCat.Sound();
-            myCat.Born(412231210);
+            myCat.Born(5);
             myCat.Child();
 
-            Dog myDog = new Dog("Gyula");
+            Dog myDog = new Dog("Gyula", false);
             myDog.Sleep();
             myDog.Hunt();
             myDog.Sound();
+            myDog.Born(7);
+            myDog.Child();
+
 
             Console.ReadKey();
         }
