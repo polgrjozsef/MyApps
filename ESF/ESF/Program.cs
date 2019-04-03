@@ -155,6 +155,7 @@ namespace ESF
             switch (Console.ReadKey(true).KeyChar)
             {
                 case 'l':
+                        Console.WriteLine("A könyvtáram tartalma: ");
                     foreach (Book book in Lista)
                     {
                         Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
