@@ -28,6 +28,7 @@ namespace tipusKonverzio
             object c = 10;
 
             string aa = a as string;
+            //expr ? v1 : v2
             Console.WriteLine(aa == null ? "NULL" : aa); // 123 
 
             string bb = b as string;
@@ -36,6 +37,11 @@ namespace tipusKonverzio
             string cc = c as string;
             Console.WriteLine(cc == null ? "NULL" : cc); // NULL 
 
+
+            for (char ch = 'a'; ch <= 'z'; ++ch)
+            {
+                Console.Write((int)ch);
+            }
 
             Console.ReadKey();
         }
