@@ -40,10 +40,60 @@ namespace tipusKonverzio
 
             for (char ch = 'a'; ch <= 'z'; ++ch)
             {
-                Console.Write((int)ch);
+                Console.WriteLine((int)ch);
             }
 
-            Console.ReadKey();
+            //Tömbök
+
+            int[] iTomb = new int[10];
+            Random r = new Random();
+            int iPrev = 0;
+            for (int i = 0; i < iTomb.Length; i++)
+            {
+                Console.WriteLine("Kérem az {0}. számot:", i);
+                try
+                {
+                    iTomb[i] = int.Parse(Console.ReadLine());
+                    iPrev = i;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Hiba!" + e.Message);
+                    i = iPrev;
+                }
+            }
+
+            Console.WriteLine();
+            for (int i = 0; i <iTomb.Length; i++)
+            {
+                Console.Write(iTomb[i] + " ");
+            }
+
+            int[] iArr = new int[] { 1, 2, 3, 4 };
+            string[] sArr = new string[] { "alma", "körte", "Banán", "Mangó" };
+
+            Array.Sort(sArr);
+            Array.Sort(iArr);
+            for (int i = 0; i < iArr.Length; i++)
+            {
+                Console.Write(iArr[i] + " ");
+            }
+
+            for (int i = 0; i < sArr.Length; i++)
+            {
+                Console.Write(sArr[i] + " ");
+            }
+
+            //Többdimenziós tömb
+            int[,] matrix = new int[,]
+            {
+                {12, 23, 2 },
+                {13, 67, 52 },
+                {45, 55, 1 }
+            };
+
+
+                Console.ReadKey();
         }
     }
 }
